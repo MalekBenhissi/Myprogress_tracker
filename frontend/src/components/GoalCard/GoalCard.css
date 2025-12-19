@@ -1,0 +1,293 @@
+.goal-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #3B82F6;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.goal-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.goal-card.completed {
+  border-left-color: #10B981;
+  opacity: 0.8;
+}
+
+.goal-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.goal-category {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.75rem;
+  color: #6B7280;
+  text-transform: capitalize;
+}
+
+.category-icon {
+  font-size: 1rem;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #9CA3AF;
+  cursor: pointer;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.delete-btn:hover {
+  background-color: #FEF2F2;
+  color: #EF4444;
+}
+
+.goal-card-content {
+  margin-bottom: 15px;
+}
+
+.goal-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1F2937;
+  margin: 0 0 8px 0;
+}
+
+.goal-description {
+  font-size: 0.875rem;
+  color: #6B7280;
+  margin: 0 0 15px 0;
+  line-height: 1.4;
+}
+
+.goal-steps {
+  margin-top: 15px;
+}
+
+.goal-steps h4 {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+  margin: 0 0 8px 0;
+}
+
+.steps-list {
+  space-y: 4px;
+}
+
+.step-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 0;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  border-radius: 4px;
+}
+
+.step-item:hover {
+  background-color: #F9FAFB;
+}
+
+.step-checkbox {
+  font-size: 0.875rem;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step-item.completed .step-checkbox {
+  color: #10B981;
+}
+
+.step-item:not(.completed) .step-checkbox {
+  color: #9CA3AF;
+}
+
+.step-title {
+  font-size: 0.875rem;
+  color: #374151;
+}
+
+.step-item.completed .step-title {
+  text-decoration: line-through;
+  color: #9CA3AF;
+}
+
+.step-more {
+  font-size: 0.75rem;
+  color: #6B7280;
+  font-style: italic;
+  padding: 6px 0;
+}
+
+.goal-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 12px;
+  border-top: 1px solid #F3F4F6;
+}
+
+.goal-date {
+  font-size: 0.75rem;
+  color: #9CA3AF;
+}
+
+.completed-badge {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #10B981;
+  background-color: #D1FAE5;
+  padding: 4px 8px;
+  border-radius: 12px;
+}
+/* Couleurs dynamiques pour les bordures - AJOUTEZ CES LIGNES */
+.goal-card[style*="border-left-color: #3B82F6"] {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.05), transparent);
+}
+
+.goal-card[style*="border-left-color: #EF4444"] {
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.05), transparent);
+}
+
+.goal-card[style*="border-left-color: #10B981"] {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.05), transparent);
+}
+
+.goal-card[style*="border-left-color: #F59E0B"] {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.05), transparent);
+}
+
+.goal-card[style*="border-left-color: #8B5CF6"] {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.05), transparent);
+}
+
+/* Style moderne pour le bouton Supprimer */
+.modern-delete-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #EF4444, #DC2626);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(239, 68, 68, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.modern-delete-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.modern-delete-btn:hover::before {
+  left: 100%;
+}
+
+.modern-delete-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(239, 68, 68, 0.4);
+  background: linear-gradient(135deg, #DC2626, #B91C1C);
+}
+
+.modern-delete-btn:active {
+  transform: translateY(0);
+}
+
+.modern-delete-btn .btn-icon {
+  font-size: 1rem;
+}
+
+/* Bouton Retour Élégant */
+.elegant-back-btn {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(59, 130, 246, 0.1);
+  color: #3B82F6;
+  border: 2px solid #3B82F6;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.elegant-back-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.2), transparent);
+  transition: left 0.7s;
+}
+
+.elegant-back-btn:hover::before {
+  left: 100%;
+}
+
+.elegant-back-btn:hover {
+  background: #3B82F6;
+  color: white;
+  transform: translateX(-8px);
+  box-shadow: -8px 8px 20px rgba(59, 130, 246, 0.3);
+  border-color: #3B82F6;
+}
+
+.elegant-back-btn:active {
+  transform: translateX(-4px);
+  box-shadow: -4px 4px 10px rgba(59, 130, 246, 0.2);
+}
+
+.elegant-back-btn .btn-content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.elegant-back-btn .arrow {
+  font-size: 1.1rem;
+  transition: transform 0.3s ease;
+}
+
+.elegant-back-btn:hover .arrow {
+  transform: translateX(-4px);
+}
