@@ -57,9 +57,11 @@ Le projet repose sur une architecture **client–serveur**.
 ```text
 myprogress-tracker/
 ├── backend/         
-│   ├── src/
+│   ├── middleware/
+│   ├── models/
+│   ├── routes/
 │   ├── package.json
-│   └── .env.example
+│   └──  server.js
 │
 ├── frontend/         
 │   ├── src/
